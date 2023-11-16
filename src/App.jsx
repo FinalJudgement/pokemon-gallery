@@ -1,14 +1,27 @@
+import { useState } from "react";
 import React from "react";
 import "./App.css";
 import PokemonList from "./components/PokemonList";
+import PokemonPage from "./components/PokemonPage";
 
 function App() {
+  const [selectedPokemon, setSelectedPokemon] = useState(null);
+  console.log(selectedPokemon);
   return (
     <>
-      <h1 className="mainHeading">Pokemon List</h1>
-      <main>
-        <PokemonList />
-      </main>
+      {selectedPokemon ? (
+        <main>
+          <PokemonPage
+            selectedPokemon={selectedPokemon}
+            setSelectedPokemon={setSelectedPokemon}
+          />
+        </main>
+      ) : (
+        <main>
+          <h1 className="mainHeading">Pokemon List</h1>
+          <PokemonList setSelectedPokemon={setSelectedPokemon} />
+        </main>
+      )}
     </>
   );
 }

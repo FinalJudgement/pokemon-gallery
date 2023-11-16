@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import PokemonCard from "./PokemonCard";
 
-const PokemonList = () => {
+const PokemonList = ({ setSelectedPokemon }) => {
   const [pokemonDataList, setPokemonDataList] = useState([]);
   useEffect(() => {
     const getPOkeApiData = async () => {
@@ -19,8 +19,8 @@ const PokemonList = () => {
         return (
           <PokemonCard
             key={pokemon.url}
-            name={pokemon.name}
             url={pokemon.url}
+            setSelectedPokemon={setSelectedPokemon}
           />
         );
       })}

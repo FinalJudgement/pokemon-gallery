@@ -21,10 +21,30 @@
   height: 300px;
   width: 250px;
   margin: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .card img {
-  height: 100px;
+  height: 200px;
+}
+
+.poke-page {
+  background-color: rgb(148, 237, 209);
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.poke-page img {
+  height: 300px;
+}
+
+.poke-page button {
+  display: block;
+  padding: 10px 20px;
+  margin: 0 auto;
 }
 
 .read-the-docs {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const PokemonCard = ({ name, url }) => {
+const PokemonCard = ({ url, setSelectedPokemon }) => {
   const [pokemonData, setPokemonData] = useState(null);
 
   useEffect(() => {
@@ -11,7 +11,12 @@ const PokemonCard = ({ name, url }) => {
     getSinglePokeData();
   }, []);
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        setSelectedPokemon(pokemonData);
+      }}
+    >
       {pokemonData ? (
         <>
           <p>{pokemonData.name}</p>
