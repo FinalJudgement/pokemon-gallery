@@ -15,9 +15,7 @@ const PokemonPage = ({ selectedPokemon, setSelectedPokemon }) => {
       <p>Level 1</p>
 
       {selectedPokemon.stats.map((obj) => {
-        return (
-          <p key={selectedPokemon.id}>{`${obj.stat.name} ${obj.base_stat}`}</p>
-        );
+        return <p key={obj.stat.url}>{`${obj.stat.name} ${obj.base_stat}`}</p>;
       })}
 
       <button

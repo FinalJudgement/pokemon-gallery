@@ -6,7 +6,6 @@ import PokemonPage from "./components/PokemonPage";
 
 function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
-  console.log(selectedPokemon);
   return (
     <>
       {selectedPokemon ? (

@@ -9,7 +9,7 @@ const PokemonCard = ({ url, setSelectedPokemon }) => {
       setPokemonData(data);
     };
     getSinglePokeData();
-  }, []);
+  }, [url]);
   return (
     <div
       className="card"
